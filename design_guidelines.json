@@ -1,0 +1,201 @@
+{
+  "theme_and_identity": {
+    "project_name": "JobPulse AI (FutureProof AI)",
+    "aesthetic_archetype": "Electric & Neon meets Premium Glassmorphism (Apple + OpenAI + Stripe + Linear)",
+    "mood": "Futuristic, premium, insightful, high-end startup, highly animated, authoritative",
+    "description": "A world-class futuristic AI web application that visually tracks and predicts the impact of AI on users' careers. Features heavy glassmorphism, glowing particles, deep gradients, and fluid cinematic transitions."
+  },
+  "typography": {
+    "font_strategy": "The Anti-Default Rule: Distinctive, premium, and layered hierarchy. NO Inter or Roboto for headings.",
+    "families": {
+      "heading": "'Outfit', sans-serif",
+      "body": "'Manrope', sans-serif",
+      "data_and_numbers": "'Azeret Mono', monospace"
+    },
+    "hierarchy": {
+      "h1": {
+        "classes": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tighter leading-none",
+        "description": "For main landing page hero. Use text-transparent and bg-clip-text with a cyan to purple gradient."
+      },
+      "h2": {
+        "classes": "text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-tight",
+        "description": "Section headers and primary onboarding questions."
+      },
+      "h3": {
+        "classes": "text-xl sm:text-2xl font-medium tracking-tight",
+        "description": "Subsection headers and Dashboard component titles."
+      },
+      "h4": {
+        "classes": "text-lg font-medium",
+        "description": "Card headers and small widget titles."
+      },
+      "body": {
+        "classes": "text-base sm:text-lg font-normal leading-relaxed text-muted-foreground"
+      },
+      "overline_labels": {
+        "classes": "text-xs font-bold uppercase tracking-[0.2em] text-accent-foreground",
+        "description": "Used for 'TOP AI FACTORS', 'RISK LEVEL' badges."
+      },
+      "data_values": {
+        "classes": "font-mono font-medium tracking-tight",
+        "description": "Used for Automation Probability %, trend chart axes, and numeric metrics."
+      }
+    }
+  },
+  "colors": {
+    "strategy": "High-contrast Electric & Neon. Forbidden: #7351B7. Using Stark White for light mode and Deepest Void Black for dark mode, elevated by Neon Cyan, Deep Blue, and Electric Indigo.",
+    "dark_mode": {
+      "background": "#030305",
+      "foreground": "#FAFAFA",
+      "card": "rgba(255, 255, 255, 0.02)",
+      "card_border": "rgba(255, 255, 255, 0.08)",
+      "primary": "#00E5FF",
+      "primary_foreground": "#030305",
+      "secondary": "#4F46E5",
+      "accent": "#8B5CF6",
+      "muted": "#1E1E28",
+      "muted_foreground": "#8F8F9D",
+      "destructive": "#FF3B30",
+      "border": "rgba(255, 255, 255, 0.1)",
+      "gradient_recipes": {
+        "hero_text": "bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-500",
+        "background_glow": "bg-gradient-to-br from-indigo-900/20 via-black to-cyan-900/10",
+        "risk_high": "bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-400 border-red-500/30",
+        "risk_low": "bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 border-emerald-500/30"
+      }
+    },
+    "light_mode": {
+      "background": "#FAFAFA",
+      "foreground": "#05050A",
+      "card": "rgba(255, 255, 255, 0.7)",
+      "card_border": "rgba(0, 0, 0, 0.06)",
+      "primary": "#2563EB",
+      "primary_foreground": "#FAFAFA",
+      "secondary": "#4F46E5",
+      "accent": "#06B6D4",
+      "muted": "#F1F1F5",
+      "muted_foreground": "#646470",
+      "destructive": "#DC2626",
+      "border": "rgba(0, 0, 0, 0.1)",
+      "gradient_recipes": {
+        "hero_text": "bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500",
+        "background_glow": "bg-gradient-to-br from-blue-50/50 via-white to-cyan-50/50",
+        "risk_high": "bg-gradient-to-r from-red-100 to-orange-100 text-red-700 border-red-200",
+        "risk_low": "bg-gradient-to-r from-emerald-100 to-cyan-100 text-emerald-700 border-emerald-200"
+      }
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "strategy": "The 'Crystal' Variant (Apple-like). High blur, solid structural borders, subtle shadow.",
+      "classes": "backdrop-blur-2xl backdrop-saturate-150 shadow-[0_8px_32px_rgba(0,0,0,0.12)] border",
+      "dark_specifics": "bg-white/5 border-white/10",
+      "light_specifics": "bg-white/60 border-black/5"
+    },
+    "tracing_beam": {
+      "strategy": "Animated glowing gradient lines around high-value active cards (like Top AI Factors or Final Result).",
+      "implementation": "Use Framer Motion to animate an SVG border path or use a moving mask-image with blur-md."
+    },
+    "corners": {
+      "global": "rounded-[24px]",
+      "buttons": "rounded-full",
+      "inner_elements": "rounded-[16px]",
+      "pills": "rounded-full"
+    }
+  },
+  "layouts_and_spacing": {
+    "scale": "Generous Spacing Philosophy. Use 2-3x more padding than standard.",
+    "section_padding": "py-24 sm:py-32",
+    "container_padding": "px-6 sm:px-12 lg:px-24",
+    "bento_grid": {
+      "strategy": "High Density Grid for the Result Dashboard. Strict grid hierarchy, precise usage of screen space.",
+      "classes": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-6",
+      "spans": {
+        "automation_gauge": "col-span-full lg:col-span-4 row-span-2",
+        "radar_chart": "col-span-full lg:col-span-4 row-span-2",
+        "skill_scores": "col-span-full lg:col-span-4 row-span-1",
+        "trend_chart": "col-span-full lg:col-span-8 row-span-2",
+        "top_factors": "col-span-full lg:col-span-4 row-span-2",
+        "recommendations": "col-span-full lg:col-span-6",
+        "alternatives": "col-span-full lg:col-span-6"
+      }
+    }
+  },
+  "component_conventions": {
+    "buttons": {
+      "primary": "Pill-shaped (rounded-full), bold neon background (dark) or deep blue (light), with text-shadow for contrast, hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-300.",
+      "secondary": "Glass pill, border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300."
+    },
+    "cards": {
+      "default": "Glassmorphic rounded-[24px] overflow-hidden group hover:border-primary/50 transition-colors duration-500",
+      "persona_cards": "Interactive cards in Step 1. Require hover lift, glowing border on focus, and an internal icon."
+    },
+    "inputs": {
+      "search_autocomplete": "Massive, immersive search bar. text-2xl. No borders, only a soft bottom glow. backdrop-blur-xl bg-transparent.",
+      "slider": "Shadcn Slider customized with glowing primary track and a neon-shadowed thumb."
+    },
+    "charts": {
+      "library": "Recharts (wrapped in Shadcn Chart).",
+      "styling": "No grid lines or very subtle dashed lines. Smooth curves for line charts. Transparent backgrounds for pie/radar. Use Neon Cyan, Indigo, and Violet for chart series."
+    }
+  },
+  "motion_and_interactions": {
+    "cinematic_scanning": "Step 4 animation. Full screen or large card container. A cyan laser line sweeps top-to-bottom using Framer Motion (y: [0, 100%]), leaving a trail of illuminated text. No standard loading spinners.",
+    "page_transitions": "AnimatePresence with Framer Motion. Elements fade in (opacity: 0 -> 1) and slide up (y: 20 -> 0) with a gentle spring stiffness (stiffness: 100, damping: 20).",
+    "staggered_lists": "Dashboard result cards MUST animate in sequentially. (staggerChildren: 0.1)."
+  },
+  "media_and_3d": {
+    "galaxy_particles": "Use 'tsparticles' or 'react-tsparticles' with a custom 'mesh/neural network' config: slow moving dots connected by thin lines, colored in cyan/purple.",
+    "icons": "Use 'lucide-react' with a consistent 1.5 stroke width. Use dual-tone styling if possible (e.g. SVG stroke vs fill)."
+  },
+  "accessibility": {
+    "contrast": "Ensure APCA contrast ratio. Neon text on black must be checked. If text sits on a glowing element, add text-shadow.",
+    "focus": "All interactive elements must have focus:ring-2 focus:ring-primary focus:outline-none.",
+    "motion": "Respect prefers-reduced-motion in all Framer Motion configs."
+  },
+  "image_urls": {
+    "fallback_backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1678247539441-05ad26a18343?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGZ1dHVyaXN0aWMlMjBnbG93aW5nJTIwbWVzaCUyMGRhcmt8ZW58MHx8fHwxNzgzNjc0MzEzfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Abstract Blur",
+        "description": "Dark background with blue and purple glowing aura, excellent for dark mode background layer behind glassmorphism."
+      }
+    ]
+  },
+  "instructions_to_main_agent": {
+    "strict_rules": [
+      "DO NOT use generic centered layouts. Utilize asymmetry and dynamic grids.",
+      "DO NOT use the default Vercel/Stripe card look. Heavily customize Shadcn components with the provided 'Crystal' Glassmorphism settings.",
+      "DO NOT use Inter or Roboto. Use Outfit for headings and Manrope for body.",
+      "NEVER use a fully transparent header; it must have a backdrop-blur.",
+      "DO NOT build a standard web form for onboarding. It must feel like an immersive, interactive app flow with animated step transitions.",
+      "When building Step 4 (AI Scanning), DO NOT use a spinner. You MUST use Framer Motion to create a scanning laser effect over text or a grid.",
+      "In the Dashboard, every chart and widget MUST sit on a glassmorphic surface with proper internal padding (p-6 or p-8)."
+    ],
+    "implementation_steps": [
+      "1. Setup Tailwind config with exact colors and border radiuses provided in this JSON.",
+      "2. Setup React Router for the multi-step flow or manage state locally with Framer Motion AnimatePresence.",
+      "3. Implement the TSParticles background globally, ensuring it toggles colors/opacity based on dark/light mode.",
+      "4. Build the immersive landing page hero.",
+      "5. Build Onboarding Steps 1-4 with custom glassmorphic cards and slider inputs.",
+      "6. Build the Step 5 Bento Grid Dashboard using Recharts and pure HTML/Tailwind for layout structure."
+    ]
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use sonner for toasts, located in /app/src/components/ui/sonner.js",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ]
+}
