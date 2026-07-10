@@ -11,6 +11,7 @@ import {
   PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis, Tooltip,
 } from "recharts";
 import ThemeToggle from "../components/ThemeToggle";
+import ProfileDropdown from "../components/ProfileDropdown";
 
 const ICON_MAP = {
   "message-circle": MessageCircle,
@@ -134,7 +135,10 @@ const Results = () => {
         <div className="glass rounded-full px-4 py-2 text-xs uppercase tracking-[0.25em] text-muted-foreground">
           Result Dashboard
         </div>
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <ProfileDropdown />
+        </div>
       </div>
 
       <main className="relative z-10 mx-auto max-w-7xl px-6 py-12 sm:px-12">

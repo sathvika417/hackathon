@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Sparkles, Compass, ShieldCheck, TrendingUp } from "lucide-react";
 import ThemeToggle from "../components/ThemeToggle";
+import ProfileDropdown from "../components/ProfileDropdown";
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -25,7 +26,10 @@ const Landing = () => {
             FutureProof<span className="text-cyan-500 dark:text-cyan-400">.ai</span>
           </span>
         </div>
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <ProfileDropdown />
+        </div>
       </nav>
 
       {/* Hero */}

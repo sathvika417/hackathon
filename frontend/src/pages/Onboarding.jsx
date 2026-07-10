@@ -16,6 +16,7 @@ import {
 import { fetchOccupations, predictAutomation } from "../lib/api";
 import { Slider } from "../components/ui/slider";
 import ThemeToggle from "../components/ThemeToggle";
+import ProfileDropdown from "../components/ProfileDropdown";
 import ProgressRing from "../components/ProgressRing";
 import { toast } from "sonner";
 
@@ -109,7 +110,10 @@ const Onboarding = () => {
           Back
         </button>
         <ProgressRing step={step} total={5} />
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <ProfileDropdown />
+        </div>
       </div>
 
       <main className="relative z-10 mx-auto flex min-h-[calc(100vh-96px)] max-w-5xl flex-col justify-center px-6 py-12 sm:px-12">
