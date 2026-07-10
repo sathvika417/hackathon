@@ -33,6 +33,7 @@ Student, Working Professional, Freelancer, Business Owner, Career Switcher.
 - [x] Dark/Light theme toggle with persisted preference
 - [x] All charts (gauge, radar, pie, line, sparklines) via Recharts + custom SVG
 - [x] Skill recommendations, career alternatives, top AI factors, insights all generated
+- [x] Auth UI shell (2026-02-10): ProfileDropdown next to ThemeToggle, /login, /signup, /forgot-password glassmorphism pages with password-strength meter and Firebase-ready AuthContext (client-only mock via localStorage)
 
 ## What's next (backlog)
 - **P1** Persist analysis history (opt-in) — currently sessionStorage only
