@@ -1,0 +1,25 @@
+{
+  "summary": "First-finish smoke: backend + frontend both healthy. All 3 API endpoints return correct shapes. End-to-end onboarding flow (landing -> persona -> career -> journey -> scan -> results) completes and renders all charts + recommendations. Model discriminates correctly (doctor=Low 13.6%, cashier=High 79.1%, data_entry=High 85.1%, software_engineer=Medium 43.5%).",
+  "tested_scope": ["backend", "frontend", "integration"],
+  "passed": [
+    "GET /api/ -> 200 {status: ok}",
+    "GET /api/occupations -> 200, 35 occupations with id/name/category",
+    "POST /api/predict (software_engineer) -> 200: prob 43.5, risk Medium, 6 score_cards, 6 radar axes, 6 pie, 4 trend points (2025/2027/2030/2035), 5 top_ai_factors, 6 skills (in 5-7 range), 5 alternatives, 3 insights",
+    "POST /api/predict invalid occupation_id -> 404",
+    "Risk discrimination: doctor=Low, cashier=High, data_entry=High",
+    "Landing renders hero-title, start-analysis-btn, theme-toggle",
+    "Start Analysis navigates to /analyze step-1",
+    "Persona professional selection + Continue advances to step-2",
+    "Career search 'soft' filters and career-software_engineer selectable",
+    "Step-3: exp-2-5, edu-bachelor, ai-usage-slider (via keyboard) all interact; Run Analysis becomes enabled",
+    "Step-4 scanning shown then auto-navigates to /results within ~15s",
+    "Results dashboard: gauge-card, risk-badge, radar-card, pie-card, trend-card, 6 score cards, 5 factors, 6 skills, 5 alternatives, final-cta all visible",
+    "Theme toggle works on both landing and results"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": "score_cards query using [data-testid^=score-] returned 7 because it also matches the 'score-grid' container; the 6 actual score-<key> cards render correctly (verified visually in screenshot)."
+}
